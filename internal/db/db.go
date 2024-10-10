@@ -23,6 +23,12 @@ var clientInstance *mongo.Client
 var clientInstanceError error
 var mongoOnce sync.Once
 
+type Collection string
+
+const (
+	ProductsCollection Collection = "products"
+)
+
 const (
 	MONGODB_URI = "mongodb://localhost:27017"
 	DB_NAME     = "products-api"
